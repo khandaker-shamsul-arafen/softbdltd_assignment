@@ -19,6 +19,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final _formkey = GlobalKey<FormState>();
   TextEditingController _controller = TextEditingController();
+   List<String> alphabetlist=[];
   // Map<String,dynamic> searchList;
   //
   int value = 0;
@@ -28,7 +29,7 @@ class _HomeState extends State<Home> {
 
     setState(() {
       value;
-      // print("index value$value");
+      
     });
   }
 void initState() {
@@ -43,10 +44,6 @@ void initState() {
   void tex_t(String tex_t1) {
     tex_t2 = tex_t1;
 
-    setState(() {
-    //  tex_t2;
-    // print(tex_t2);
-    });
   }
 
   @override
