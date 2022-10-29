@@ -7,34 +7,7 @@ import 'package:softbdltd/test.dart';
 
 import 'collagename_getby _Alphabet.dart';
 
-var alphabetlist = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z"
-];
+
 
 class Home extends StatefulWidget {
   const Home();
@@ -58,7 +31,15 @@ class _HomeState extends State<Home> {
       // print("index value$value");
     });
   }
+void initState() {
+    // TODO: implement initState
 
+    for(int i=65; i<=90; i++){
+      alphabetlist.add(String.fromCharCode(i));
+    }
+    print(alphabetlist);
+    super.initState();
+  }
   void tex_t(String tex_t1) {
     tex_t2 = tex_t1;
 
@@ -78,8 +59,7 @@ class _HomeState extends State<Home> {
         title: Image.asset("image/sh.jpg", fit: BoxFit.cover),
       ),
       body: SafeArea(
-          // child: Expanded(
-          //   flex: 1,
+          
           child: ListView(
         children: [
           SizedBox(
@@ -107,17 +87,9 @@ class _HomeState extends State<Home> {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 6.0, left: 10.0),
                   child:
-                      // TextFormField(
-                      //   controller: _controller,
-                      //   keyboardType: TextInputType.text,
-                      //   decoration: InputDecoration(
-                      //       hintText: "Search By Instutitute Name"),
-                      // ),
+                      
                       ListTile(
-                    // leading: Icon(
-                    //   Icons.search,
-                    //   color: red,
-                    // ),
+                   
                     title: TextFormField(
                       controller: _controller,
                       decoration: InputDecoration(
@@ -145,9 +117,7 @@ class _HomeState extends State<Home> {
               style: TextStyle(fontWeight: FontWeight.w300, fontSize: 20.0),
             ),
           ),
-          // SizedBox(
-          //   height: 5,
-          //   ),
+         
           Padding(
             padding: const EdgeInsets.all(6.0),
             child: Container(
@@ -193,206 +163,7 @@ class _HomeState extends State<Home> {
             ),
           ),
 
-          // Start here Column(
-          //     children: [
-          //   Padding(
-          //     padding: const EdgeInsets.only(left: 18.0,right: 8),
-          //     child: Container(
-          //       height: 120,
-          //       width: MediaQuery.of(context).size.width,
-          //       decoration: BoxDecoration(
-          //           color: Colors.pink,
-          //           borderRadius: BorderRadius.circular(20)),
-          //
-          //         child: SingleChildScrollView(
-          //           scrollDirection: Axis.vertical,
-          //           child: Column(
-          //             children: [
-          //            //   Expanded(
-          //            //     flex:1,
-          //               //  child:
-          //                 SingleChildScrollView(
-          //                   scrollDirection: Axis.horizontal,
-          //                   child: Padding(
-          //                     padding: const EdgeInsets.all(10.0),
-          //                     child: Row(
-          //                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //                       children: [
-          //
-          //
-          //                         Image.network( 'https://images.unsplash.com/photo-1547721064-da6cfb341d50',height: 30,),
-          //                          SizedBox(
-          //                            width: 30,
-          //                          ),
-          //                         Text("Ideal School And college")
-          //
-          //                         //instute_name(collagename: tex_t2),
-          //
-          //                       ],
-          //                     ),
-          //                   ),
-          //                 ),
-          //              // ),
-          //              // Expanded(
-          //                 //flex: 1,
-          //                 //child:
-          //               SizedBox(
-          //                 height: 10,
-          //               ),
-          //                 SingleChildScrollView(
-          //                   scrollDirection: Axis.horizontal,
-          //                   child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-          //                     Icon(Icons.location_on),
-          //                     SizedBox(
-          //                       width: 10,
-          //                     ),
-          //                  //  address(alpha: tex_t2),
-          //                  //   Text("Location")
-          //                   ]),
-          //                 ),
-          //             //  ),
-          //               Padding(
-          //                 padding: EdgeInsets.symmetric(horizontal: 10.0),
-          //             //    child: Expanded(
-          //                //   flex: 1,
-          //                   child: Container(
-          //                     height: 1.0,
-          //                     width: 360.0,
-          //                     color: Colors.black12,
-          //                   ),
-          //             //    ),
-          //               ),
-          //               SizedBox(
-          //                 height: 15,
-          //               ),
-          //               Padding(
-          //                 padding: const EdgeInsets.only(
-          //                     left: 18.0, bottom: 12.0, right: 18.0),
-          //              //   child: Expanded(
-          //                  // flex: 1,
-          //                   child: Row(
-          //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //                     children: [
-          //                       Container(
-          //                         decoration: BoxDecoration(
-          //                             borderRadius: BorderRadius.circular(10),
-          //                             color: Colors.white,
-          //                             boxShadow: [
-          //                               BoxShadow(
-          //                                   color: Colors.grey,
-          //                                   offset: Offset(1, 1),
-          //                                   blurRadius: 4)
-          //                             ]),
-          //                         child: Padding(
-          //                             padding: const EdgeInsets.all(4.0),
-          //                             child: Icon(
-          //                               Icons.phone,
-          //                               size: 16,
-          //                             )),
-          //                       ),
-          //                       SizedBox(
-          //                         width: 10,
-          //                       ),
-          //                       Container(
-          //                         decoration: BoxDecoration(
-          //                             borderRadius: BorderRadius.circular(10),
-          //                             color: Colors.white,
-          //                             boxShadow: [
-          //                               BoxShadow(
-          //                                   color: Colors.grey,
-          //                                   offset: Offset(1, 1),
-          //                                   blurRadius: 4)
-          //                             ]),
-          //                         child: Padding(
-          //                             padding: const EdgeInsets.all(4.0),
-          //                             child: Icon(
-          //                               Icons.whatsapp,
-          //                               size: 16,
-          //                             )),
-          //                       ),
-          //                       SizedBox(
-          //                         width: 10,
-          //                       ),
-          //                       Container(
-          //                         decoration: BoxDecoration(
-          //                             borderRadius: BorderRadius.circular(10),
-          //                             color: Colors.white,
-          //                             boxShadow: [
-          //                               BoxShadow(
-          //                                   color: Colors.grey,
-          //                                   offset: Offset(1, 1),
-          //                                   blurRadius: 4)
-          //                             ]),
-          //                         child: Padding(
-          //                             padding: const EdgeInsets.all(4.0),
-          //                             child: Icon(
-          //                               IconData(0xe6a8, fontFamily: 'MaterialIcons'),
-          //                               size: 16,
-          //                             )),
-          //                       ),
-          //                       SizedBox(
-          //                         width: 10,
-          //                       ),
-          //                       Container(
-          //                         decoration: BoxDecoration(
-          //                             borderRadius: BorderRadius.circular(10),
-          //                             color: Colors.white,
-          //                             boxShadow: [
-          //                               BoxShadow(
-          //                                   color: Colors.grey,
-          //                                   offset: Offset(1, 1),
-          //                                   blurRadius: 4)
-          //                             ]),
-          //                         child: Padding(
-          //                             padding: const EdgeInsets.all(4.0),
-          //                             child: Icon(
-          //                               Icons.chat,
-          //                               size: 16,
-          //                             )),
-          //                       ),
-          //                     ],
-          //                   ),
-          //               //  ),
-          //               ),
-          //             ],
-          //           ),
-          //         ),
-          //
-          //     ),
-          //   ),
-          // ]),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 8, right: 8.0),
-          //   child: SingleChildScrollView(
-          //     scrollDirection: Axis.horizontal,
-          //     child: Container(
-          //       height: 80,
-          //       width: MediaQuery.of(context).size.width,
-          //       decoration: BoxDecoration(
-          //         borderRadius: BorderRadius.only(
-          //             topRight: Radius.circular(20.0),
-          //             topLeft: Radius.circular(20)),
-          //         color: Colors.white,
-          //       ),
-          //       child: Row(
-          //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //         children: [
-          //           // Image.network(
-          //           //   'https://images.unsplash.com/photo-1547721064-da6cfb341d50',
-          //           //   height: 30,
-          //           // ),
-          //           SizedBox(
-          //             width: 30,
-          //           ),
-          //          // Text("Ideal School And college");
-          //
-          //            instute_name(name1: tex_t2),
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // ),
-         // End here
+         
           Padding(
             padding: const EdgeInsets.only(left: 8.0,top: 8.0,right: 8.0),
             child: Container(
